@@ -1,0 +1,6 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: https://github.com/ekmett/lens
+  tag: de88a4727babd5dfc34a46b2e4d93c56916051f0

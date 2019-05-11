@@ -1,0 +1,49 @@
+name:                template-haskell-lens
+version:             0.1
+synopsis:            Lenses, Prisms, and Traversals for working with Template Haskell
+description:         This library defines @Lens@es, @Prism@s, and @Traversal@s
+                     built on top of the API exposed by the @template-haskell@
+                     library. Be aware that the @template-haskell@ API is prone
+                     to frequent breaking changes, and since this library mirrors
+                     the API exposed by @template-haskell@, this means that the API
+                     in this library can change at a similar pace.
+                     .
+                     This package was split off from the @Language.Haskell.TH.Lens@
+                     module that used to exist in the
+                     @<http://hackage.haskell.org/package/lens lens>@
+                     package prior to version 4.18.
+homepage:            https://github.com/lens/template-haskell-lens/
+bug-reports:         https://github.com/lens/template-haskell-lens/issues
+license:             BSD2
+license-file:        LICENSE
+cabal-version:       >=1.10
+author:              Edward A. Kmett
+maintainer:          Edward A. Kmett <ekmett@gmail.com>
+stability:           experimental
+copyright:           Copyright (C) 2012-2019 Edward A. Kmett
+category:            Data, Lenses, Generics
+build-type:          Simple
+extra-source-files:  CHANGELOG.markdown, README.markdown
+tested-with:         GHC == 7.4.2
+                   , GHC == 7.6.3
+                   , GHC == 7.8.4
+                   , GHC == 7.10.3
+                   , GHC == 8.0.2
+                   , GHC == 8.2.2
+                   , GHC == 8.4.4
+                   , GHC == 8.6.5
+                   , GHC == 8.8.1
+
+source-repository head
+  type: git
+  location: https://github.com/lens/template-haskell/lens.git
+
+library
+  exposed-modules:     Language.Haskell.TH.Lens
+  build-depends:       base             >= 4.5  && < 5
+                     , containers       >= 0.4  && < 0.7
+                     , lens             >= 4.18 && < 5
+                     , template-haskell >= 2.7  && < 2.16
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall

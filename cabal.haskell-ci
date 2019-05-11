@@ -1,0 +1,10 @@
+ghc-head:               True
+no-tests-no-benchmarks: False
+unconstrained:          False
+irc-channels:           irc.freenode.org#haskell-lens
+
+raw-project
+  -- Work around https://github.com/haskell/cabal/issues/5586
+  package lens
+    tests:      False
+    benchmarks: False
